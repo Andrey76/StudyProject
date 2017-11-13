@@ -1,9 +1,10 @@
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.List;
 
-/**
- * Created by andr_ on 13.11.2017.
- */
+@Entity
 public class GroupTodo {
+
     private List<Todo> listOfBusiness;
 
     public GroupTodo() {
@@ -12,7 +13,7 @@ public class GroupTodo {
     public GroupTodo(List<Todo> listOfBusiness) {
         this.listOfBusiness = listOfBusiness;
     }
-
+    @OneToMany (targetEntity = Todo.class, mappedBy = "business")
     public List<Todo> getListOfBusiness() {
         return listOfBusiness;
     }

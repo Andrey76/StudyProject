@@ -7,6 +7,12 @@
     <groupId>StudyProject</groupId>
     <artifactId>StudyProject</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+<dependencies>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.2.11.Final</version>
+    </dependency>
+</dependencies>
 
 </project>

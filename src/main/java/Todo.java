@@ -1,7 +1,11 @@
-/**
- * Created by andr_ on 13.11.2017.
- */
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Todo {
+    @ManyToOne
+    @JoinColumn(name = "business_id")
     private String business;
 
     public Todo() {
