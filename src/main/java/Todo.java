@@ -4,9 +4,11 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Todo {
+
+    private String business;
     @ManyToOne
     @JoinColumn(name = "business_id")
-    private String business;
+    private GroupTodo groupTodo;
 
     public Todo() {
     }

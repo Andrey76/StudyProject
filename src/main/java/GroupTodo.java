@@ -13,7 +13,8 @@ public class GroupTodo {
     public GroupTodo(List<Todo> listOfBusiness) {
         this.listOfBusiness = listOfBusiness;
     }
-    @OneToMany (targetEntity = Todo.class, mappedBy = "business")
+
+    @OneToMany (targetEntity = Todo.class, mappedBy = "groupTodo")
     public List<Todo> getListOfBusiness() {
         return listOfBusiness;
     }
