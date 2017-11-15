@@ -3,17 +3,17 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Todo {
+public class ToDo {
 
     private String business;
     @ManyToOne
     @JoinColumn(name = "business_id")
     private GroupTodo groupTodo;
 
-    public Todo() {
+    public ToDo() {
     }
 
-    public Todo(String business) {
+    public ToDo(String business) {
         this.business = business;
     }
 
@@ -27,7 +27,7 @@ public class Todo {
 
     @Override
     public String toString() {
-        return "Todo{" +
+        return "ToDo{" +
                 "business='" + business + '\'' +
                 '}';
     }

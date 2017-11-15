@@ -5,21 +5,21 @@ import java.util.List;
 @Entity
 public class GroupTodo {
 
-    private List<Todo> listOfBusiness;
+    private List<ToDo> listOfBusiness;
 
     public GroupTodo() {
     }
 
-    public GroupTodo(List<Todo> listOfBusiness) {
+    public GroupTodo(List<ToDo> listOfBusiness) {
         this.listOfBusiness = listOfBusiness;
     }
 
-    @OneToMany (targetEntity = Todo.class, mappedBy = "groupTodo")
-    public List<Todo> getListOfBusiness() {
+    @OneToMany (targetEntity = ToDo.class, mappedBy = "groupTodo")
+    public List<ToDo> getListOfBusiness() {
         return listOfBusiness;
     }
 
-    public void setListOfBusiness(List<Todo> listOfBusiness) {
+    public void setListOfBusiness(List<ToDo> listOfBusiness) {
         this.listOfBusiness = listOfBusiness;
     }
 
